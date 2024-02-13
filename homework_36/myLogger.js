@@ -1,8 +1,11 @@
+require('dotenv').config();
 const logger = require('./app');
 
-console.log(logger('LOCAL','Critical'));
-console.log(logger('DEV','Critical'));
-console.log(logger('PROD','Critical'));
-console.log(logger('LOCAL','Emergency'));
-console.log(logger('DEV','Emergency'));
-console.log(logger('PROD','Emergency'));
+const local = process.env.NODE_ENV_LOCAL
+const dev = process.env.NODE_ENV_DEV
+const prod = process.env.NODE_ENV_PROD
+
+console.log(logger(local,'Critical'));
+console.log(logger(dev,'Critical'));
+console.log(logger(prod,'Critical'));
+
