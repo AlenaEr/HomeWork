@@ -1,0 +1,92 @@
+{
+    "info": {
+      "_postman_id": "feae9f77-8e65-40d3-b9e3-3b69a93447f3",
+      "name": "My_API_Collection",
+      "description": "Collection of endpoints for testing",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "/login",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n\t\"username\": \"your_username\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/login",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "login"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "/refresh-token",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n\t\"tokenB\": \"your_refresh_token\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/refresh-token",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "refresh-token"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "/path",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "Bearer your_tokenA"
+            }
+          ],
+          "url": {
+            "raw": "http://localhost:3000/path",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "path"
+            ]
+          }
+        },
+        "response": []
+      }
+    ],
+    "protocolProfileBehavior": {}
+  }
+  
